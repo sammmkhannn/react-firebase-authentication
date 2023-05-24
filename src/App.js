@@ -1,21 +1,23 @@
-import './App.css';
-import Home from "./components/Home";
-import Login from "./components/Login";
-import Signup from "./components/SignUp";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import AuthProvider from "../Auth";
+import Home from './pages/Home';
+import Signup from './pages/SignUp';
+import Login from './pages/Login';
+import { BrowserRouter as Router} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
+ 
 function App() {
+ 
   return (
-    <AuthProvider>
     <Router>
-      <Routes>
-        <Route path='/' component={Home} />
-        <Router path='/login' component={Login} />
-        <Router path='signup' component={Signup}/>
-      </Routes>
-      </Router>
-      </AuthProvider>
+      <div>
+        <section>                              
+            <Routes>                                                                        <Route path="/" element={<Home/>}/>
+               <Route path="/signup" element={<Signup/>}/>
+               <Route path="/login" element={<Login/>}/>
+            </Routes>                    
+        </section>
+      </div>
+    </Router>
   );
 }
-
+ 
 export default App;
