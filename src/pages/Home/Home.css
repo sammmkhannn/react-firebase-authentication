@@ -1,0 +1,9 @@
+.nav__container{
+    position: relative;
+    margin: auto;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
